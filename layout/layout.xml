@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document>
+	<mscreen>
+		<configuration device="HD" id="config1" name="common"
+			orientation="portrait" type="common" />
+		<configuration orientation="portrait" name="wvga"
+			id="configuration1" type="specific" device="WVGA" />
+	</mscreen>
+	<views startup="view1">
+		<view id="view1" indicator="true" screen_orientation="full_sensor"
+			type="view">
+			<grid align_h="fill" align_v="fill" id="grid1" visible="true"
+				vsize_h="1000" vsize_w="1000" weight_h="1" weight_v="1">
+				<button align_h="fill" align_v="fill" disable="false" id="button1"
+					pack_h="80" pack_w="800" pack_x="100" pack_y="850" style="default"
+					text="Next View" visible="true" weight_h="1" weight_v="1">
+					<event connection_wrapper="connection_view1_button1_onclicked"
+						event_name="clicked" function_name="view1_button1_onclicked"
+						signal="clicked" target="view2" />
+				</button>
+				<label align_v="fill" visible="true" weight_v="1" line_wrap="none"
+					pack_h="37" weight_h="1" ellipsis="false" align_h="fill"
+					wrap_width="0" pack_w="700" pack_x="100" pack_y="36" id="label1"
+					text="Network Status"></label>
+				<label align_v="fill" visible="true" weight_v="1" line_wrap="none"
+					pack_h="25" weight_h="1" ellipsis="true" align_h="fill" wrap_width="0"
+					pack_w="140" pack_x="135" pack_y="72" id="label4" text="Wifi : "></label>
+				<label align_v="fill" visible="true" weight_v="1" line_wrap="none"
+					pack_h="25" weight_h="1" ellipsis="true" align_h="fill" wrap_width="0"
+					pack_w="140" pack_x="135" pack_y="104" id="label5" text="3G : "></label>
+				<label align_v="fill" visible="true" weight_v="1" line_wrap="none"
+					pack_h="25" weight_h="1" ellipsis="true" align_h="fill" wrap_width="0"
+					pack_w="140" pack_x="332" pack_y="73" id="label6" text="SSID : "></label>
+				<button align_v="fill" visible="true" weight_v="1" pack_h="49"
+					weight_h="1" align_h="fill" pack_w="718" disable="false" pack_x="150"
+					pack_y="153" style="default" id="button7" text="Launch Wifi Setting"></button>
+				<button align_v="fill" visible="true" weight_v="1" pack_h="50"
+					weight_h="1" align_h="fill" pack_w="717" disable="false" pack_x="150"
+					pack_y="222" style="default" id="button8" text="Update Network Status">
+					<variation config_ref="configuration1" visible="true"
+						pack_w="717" pack_x="150" pack_h="50" pack_y="235" />
+				</button>
+			</grid>
+		</view>
+		<view id="view2" indicator="true" screen_orientation="full_sensor"
+			type="view">
+			<grid align_h="fill" align_v="fill" id="grid1" visible="true"
+				vsize_h="1000" vsize_w="1000" weight_h="1" weight_v="1">
+				<button align_h="fill" align_v="fill" disable="false" id="button1"
+					pack_h="80" pack_w="800" pack_x="100" pack_y="350" style="default"
+					text="Previous View" visible="true" weight_h="1" weight_v="1">
+					<event connection_wrapper="connection_view2_button1_onclicked"
+						event_name="clicked" function_name="view2_button1_onclicked"
+						signal="clicked" target="view1" />
+				</button>
+				<button align_h="fill" align_v="fill" disable="false" id="button2"
+					pack_h="80" pack_w="800" pack_x="100" pack_y="850" style="default"
+					text="Next View" visible="true" weight_h="1" weight_v="1">
+					<event connection_wrapper="connection_view2_button2_onclicked"
+						event_name="clicked" function_name="view2_button2_onclicked"
+						signal="clicked" target="view3" />
+				</button>
+				<label align_h="fill" align_v="fill" ellipsis="false" id="label1"
+					line_wrap="none" pack_h="80" pack_w="700" pack_x="150" pack_y="50"
+					text="Second View" visible="true" weight_h="1" weight_v="1" />
+			</grid>
+		</view>
+		<view id="view3" indicator="true" screen_orientation="full_sensor"
+			type="view">
+			<grid align_h="fill" align_v="fill" id="grid1" visible="true"
+				vsize_h="1000" vsize_w="1000" weight_h="1" weight_v="1">
+				<button align_h="fill" align_v="fill" disable="false" id="button1"
+					pack_h="80" pack_w="800" pack_x="100" pack_y="350" style="default"
+					text="Previous View" visible="true" weight_h="1" weight_v="1">
+					<event connection_wrapper="connection_view3_button1_onclicked"
+						event_name="clicked" function_name="view3_button1_onclicked"
+						signal="clicked" target="view2" />
+				</button>
+				<label align_h="fill" align_v="fill" ellipsis="false" id="label1"
+					line_wrap="none" pack_h="80" pack_w="700" pack_x="150" pack_y="50"
+					text="Third View" visible="true" weight_h="1" weight_v="1" />
+				<button align_v="fill" visible="true" weight_v="1" pack_h="81"
+					weight_h="1" align_h="fill" pack_w="800" disable="false" pack_x="117"
+					pack_y="817" style="default" id="button6" text="Next View">
+					<event connection_wrapper="connection_view3_button6_onclicked"
+						function_name="view3_button6_onclicked" signal="clicked" target="view4" />
+				</button>
+			</grid>
+		</view>
+		<view indicator="true" screen_orientation="full_sensor" id="view4"
+			type="view">
+			<grid align_h="fill" vsize_w="480" align_v="fill" visible="true"
+				weight_v="1" id="grid3" weight_h="1" vsize_h="800">
+				<button align_v="fill" visible="true" weight_v="1" pack_h="47"
+					weight_h="1" align_h="fill" pack_w="334" disable="false" pack_x="81"
+					pack_y="729" style="default" id="button5" text="Back">
+					<event connection_wrapper="connection_view4_button5_onclicked"
+						function_name="view4_button5_onclicked" signal="clicked" target="view3" />
+				</button>
+				<entry context_menu="true" align_v="fill" visible="true" src=""
+					weight_v="1" editable="false" pack_h="520" scroll="false" weight_h="1"
+					single_line="false" align_h="fill" password="false"
+					file_text_format="plain_utf8" pack_w="400" disable="false" pack_x="46"
+					pack_y="95" id="entry2"
+					text="You can use this page template to move to the previous or next page."></entry>
+				<bg align_v="fill" visible="true" color="#266ABF" src=""
+					weight_v="1" pack_h="60" weight_h="1" align_h="fill" pack_w="480"
+					pack_x="0" pack_y="0" id="bg2" option="scale"></bg>
+				<label align_v="fill" visible="true" weight_v="1" line_wrap="none"
+					pack_h="47" weight_h="1" ellipsis="false" align_h="fill"
+					wrap_width="0" pack_w="384" pack_x="43" pack_y="9" id="label3"
+					text="&lt;font_size=32&gt;&lt;color=#ffffff&gt;&lt;b&gt;Header&lt;/b&gt;&lt;/color&gt;&lt;/font_size&gt;"></label>
+			</grid>
+		</view>
+	</views>
+</document>
